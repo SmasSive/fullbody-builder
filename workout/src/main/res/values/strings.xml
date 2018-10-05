@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="new_workout_name_label">Workout name:</string>
+  <string name="new_workout_name_hint">Workout name</string>
+  <string name="new_workout_button">Add Workout</string>
+</resources>

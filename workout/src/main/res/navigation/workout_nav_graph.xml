@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/mobile_navigation"
+            app:startDestination="@id/workoutListFragment"
+    >
+
+  <fragment
+      android:id="@+id/workoutListFragment"
+      android:name="com.smassive.fullbodybuilder.workout.presentation.list.view.WorkoutListFragment"
+      android:label="WorkoutListFragment"
+      >
+    <action
+        android:id="@+id/action_workoutListFragment_to_newWorkoutFragment"
+        app:destination="@id/newWorkoutFragment"
+        />
+  </fragment>
+  <fragment
+      android:id="@+id/newWorkoutFragment"
+      android:name="com.smassive.fullbodybuilder.workout.presentation.add.view.NewWorkoutFragment"
+      android:label="NewWorkoutFragment"
+      />
+</navigation>
