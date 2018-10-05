@@ -17,4 +17,5 @@ dependencies {
   implementation project(':core')
 
   implementation 'com.github.rubensousa:gravitysnaphelper:1.5'
+  implementation 'moe.feng:MaterialStepperView:0.2.4.2'
 }
