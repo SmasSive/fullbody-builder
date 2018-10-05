@@ -24,24 +24,15 @@
       tools:text="Workout Fullbody"
       />
 
-  <ImageView
-      android:id="@+id/workoutNew"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:src="@drawable/ic_plus_grey600_48dp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      />
-
   <TextView
       android:id="@+id/startWorkoutAction"
       android:layout_width="match_parent"
       android:layout_height="58dp"
-      android:paddingTop="10dp"
       android:background="@drawable/button_background"
+      android:clickable="true"
+      android:focusable="true"
       android:gravity="center"
+      android:paddingTop="10dp"
       android:text="@string/start_workout_button"
       android:textAppearance="@style/newWorkoutLabel.newWorkout"
       app:layout_constraintBottom_toBottomOf="parent"
@@ -49,12 +40,12 @@
       app:layout_constraintStart_toStartOf="parent"
       />
 
-  <View
+  <TextView
       android:layout_width="match_parent"
-      android:layout_height="10dp"
+      android:layout_height="@dimen/radius_medium"
       android:background="@drawable/margin_background"
-      app:layout_constraintTop_toTopOf="@+id/startWorkoutAction"
       app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="@+id/startWorkoutAction"
       />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

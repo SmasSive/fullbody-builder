@@ -8,7 +8,6 @@ import com.smassive.fullbodybuilder.workout.R
 import com.smassive.fullbodybuilder.workout.domain.model.Workout
 import com.smassive.fullbodybuilder.workout.presentation.list.model.WorkoutListItemModel
 import kotlinx.android.synthetic.main.item_workout.view.workoutName
-import kotlinx.android.synthetic.main.item_workout.view.workoutNew
 
 class WorkoutAdapter(
     private val workouts: List<WorkoutListItemModel>,
@@ -34,7 +33,6 @@ class WorkoutAdapter(
 
     fun bind(workoutListItemModel: WorkoutListItemModel) {
       view.workoutName.text = workoutListItemModel.name
-      view.workoutNew.visibility = View.GONE
     }
   }
 }
