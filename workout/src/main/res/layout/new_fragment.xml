@@ -10,17 +10,18 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="10dp"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
       android:gravity="center"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
       >
 
     <TextView
         android:id="@+id/tvWorkoutName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/new_workout_name_label"
         android:layout_marginEnd="10dp"
+        android:text="@string/new_workout_name_label"
+        android:textAppearance="@style/newWorkoutLabel"
         />
 
     <EditText
@@ -28,6 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/new_workout_name_hint"
+        android:textAppearance="@style/newWorkoutLabel"
         />
 
   </LinearLayout>
@@ -37,20 +39,20 @@
       android:layout_height="48dp"
       android:background="@drawable/button_background"
       app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
       />
 
   <TextView
       android:id="@+id/addWorkoutAction"
       android:layout_width="match_parent"
       android:layout_height="48dp"
-      android:text="@string/new_workout_button"
       android:gravity="center"
-      android:textAppearance="@style/newWorkout"
+      android:text="@string/new_workout_button"
+      android:textAppearance="@style/newWorkoutLabel.newWorkout"
       app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
       />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

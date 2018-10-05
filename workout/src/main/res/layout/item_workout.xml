@@ -17,10 +17,10 @@
       android:id="@+id/workoutName"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      tools:text="Workout Fullbody"
       android:textAppearance="@style/workoutTitle"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Workout Fullbody"
       />
 
   <ImageView
