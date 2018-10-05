@@ -3,4 +3,5 @@
   <string name="new_workout_name_label">Workout name:</string>
   <string name="new_workout_name_hint">Workout name</string>
   <string name="new_workout_button">Add Workout</string>
+  <string name="start_workout_button">Start Workout</string>
 </resources>
