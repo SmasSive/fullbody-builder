@@ -11,30 +11,49 @@
     android:layout_marginBottom="16dp"
     >
 
-  <TextView
-      android:id="@+id/workoutName"
+  <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="0dp"
       android:background="@drawable/view_card_background"
-      android:padding="10dp"
-      android:textAppearance="@style/workoutTitle"
+      android:orientation="vertical"
       app:layout_constraintBottom_toTopOf="@+id/startWorkoutAction"
-      app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      tools:text="Workout Fullbody"
-      />
+      >
+    <TextView
+        android:id="@+id/workoutName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space_normal"
+        android:textAppearance="@style/TextAppearance.TitleBig"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Workout Fullbody"
+        />
+
+    <moe.feng.common.stepperview.VerticalStepperView
+        android:id="@+id/workoutStepper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/workoutName"
+        app:step_activated_color="@color/colorPrimary"
+        app:step_animation_duration="@android:integer/config_mediumAnimTime"
+        app:step_done_icon="@drawable/ic_done_white_16dp"
+        app:step_line_color="@color/lightGrey"
+        app:step_normal_color="@color/lightGrey"
+        />
+  </LinearLayout>
 
   <TextView
       android:id="@+id/startWorkoutAction"
       android:layout_width="match_parent"
       android:layout_height="58dp"
-      android:background="@drawable/button_background"
+      android:background="@drawable/button_rounded_bottom_background"
       android:clickable="true"
       android:focusable="true"
       android:gravity="center"
-      android:paddingTop="10dp"
+      android:paddingTop="@dimen/space_normal"
       android:text="@string/start_workout_button"
-      android:textAppearance="@style/newWorkoutLabel.newWorkout"
+      android:textAppearance="@style/TextAppearance.ButtonBig"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"

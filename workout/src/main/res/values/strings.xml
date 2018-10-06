@@ -4,4 +4,17 @@
   <string name="new_workout_name_hint">Workout name</string>
   <string name="new_workout_button">Add Workout</string>
   <string name="start_workout_button">Start Workout</string>
+
+  <string name="workout_step_1">Workout days</string>
+  <string name="workout_step_2">Exercises</string>
+
+  <string name="next">Next</string>
+
+  <string name="weekday_monday">M</string>
+  <string name="weekday_tuesday">T</string>
+  <string name="weekday_wednesday">W</string>
+  <string name="weekday_thursday">T</string>
+  <string name="weekday_friday">F</string>
+  <string name="weekday_saturday">S</string>
+  <string name="weekday_sunday">S</string>
 </resources>

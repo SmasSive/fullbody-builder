@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
         android:text="@string/new_workout_name_label"
-        android:textAppearance="@style/newWorkoutLabel"
+        android:textAppearance="@style/TextAppearance.Title"
         />
 
     <EditText
@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/new_workout_name_hint"
-        android:textAppearance="@style/newWorkoutLabel"
+        android:textAppearance="@style/TextAppearance.Title"
         />
 
   </LinearLayout>
@@ -37,7 +37,7 @@
   <View
       android:layout_width="match_parent"
       android:layout_height="48dp"
-      android:background="@drawable/button_background"
+      android:background="@drawable/button_rounded_bottom_background"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
@@ -49,7 +49,7 @@
       android:layout_height="48dp"
       android:gravity="center"
       android:text="@string/new_workout_button"
-      android:textAppearance="@style/newWorkoutLabel.newWorkout"
+      android:textAppearance="@style/TextAppearance.ButtonBig"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"

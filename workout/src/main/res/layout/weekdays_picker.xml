@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:orientation="horizontal"
+    >
+
+  <ToggleButton
+      android:id="@+id/dayMo"
+      style="@style/toggleButton"
+      android:layout_width="@dimen/day_toggle_button_size"
+      android:layout_height="@dimen/day_toggle_button_size"
+      android:layout_marginStart="@dimen/day_toggle_button_margin"
+      android:layout_marginEnd="@dimen/day_toggle_button_margin"
+      android:background="@drawable/weekday_background"
+      android:checked="false"
+      android:textOff="@string/weekday_monday"
+      android:textOn="@string/weekday_monday"
+      app:layout_constraintHorizontal_chainStyle="spread"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toLeftOf="@+id/dayTu"
+      />
+
+  <ToggleButton
+      android:id="@+id/dayTu"
+      style="@style/toggleButton"
+      android:layout_width="@dimen/day_toggle_button_size"
+      android:layout_height="@dimen/day_toggle_button_size"
+      android:layout_marginStart="@dimen/day_toggle_button_margin"
+      android:layout_marginEnd="@dimen/day_toggle_button_margin"
+      android:background="@drawable/weekday_background"
+      android:textOff="@string/weekday_tuesday"
+      android:textOn="@string/weekday_tuesday"
+      app:layout_constraintHorizontal_chainStyle="spread"
+      app:layout_constraintLeft_toRightOf="@+id/dayMo"
+      app:layout_constraintRight_toLeftOf="@+id/dayWe"
+      />
+
+  <ToggleButton
+      android:id="@+id/dayWe"
+      style="@style/toggleButton"
+      android:layout_width="@dimen/day_toggle_button_size"
+      android:layout_height="@dimen/day_toggle_button_size"
+      android:layout_marginStart="@dimen/day_toggle_button_margin"
+      android:layout_marginEnd="@dimen/day_toggle_button_margin"
+      android:background="@drawable/weekday_background"
+      android:textOff="@string/weekday_wednesday"
+      android:textOn="@string/weekday_wednesday"
+      app:layout_constraintHorizontal_chainStyle="spread"
+      app:layout_constraintLeft_toRightOf="@+id/dayTu"
+      app:layout_constraintRight_toLeftOf="@+id/dayTh"
+      />
+
+  <ToggleButton
+      android:id="@+id/dayTh"
+      style="@style/toggleButton"
+      android:layout_width="@dimen/day_toggle_button_size"
+      android:layout_height="@dimen/day_toggle_button_size"
+      android:layout_marginStart="@dimen/day_toggle_button_margin"
+      android:layout_marginEnd="@dimen/day_toggle_button_margin"
+      android:background="@drawable/weekday_background"
+      android:textOff="@string/weekday_thursday"
+      android:textOn="@string/weekday_thursday"
+      app:layout_constraintHorizontal_chainStyle="spread"
+      app:layout_constraintLeft_toRightOf="@+id/dayWe"
+      app:layout_constraintRight_toLeftOf="@+id/dayFr"
+      />
+
+  <ToggleButton
+      android:id="@+id/dayFr"
+      style="@style/toggleButton"
+      android:layout_width="@dimen/day_toggle_button_size"
+      android:layout_height="@dimen/day_toggle_button_size"
+      android:layout_marginStart="@dimen/day_toggle_button_margin"
+      android:layout_marginEnd="@dimen/day_toggle_button_margin"
+      android:background="@drawable/weekday_background"
+      android:textOff="@string/weekday_friday"
+      android:textOn="@string/weekday_friday"
+      app:layout_constraintHorizontal_chainStyle="spread"
+      app:layout_constraintLeft_toRightOf="@+id/dayTh"
+      app:layout_constraintRight_toLeftOf="@+id/daySa"
+      />
+
+  <ToggleButton
+      android:id="@+id/daySa"
+      style="@style/toggleButton"
+      android:layout_width="@dimen/day_toggle_button_size"
+      android:layout_height="@dimen/day_toggle_button_size"
+      android:layout_marginStart="@dimen/day_toggle_button_margin"
+      android:layout_marginEnd="@dimen/day_toggle_button_margin"
+      android:background="@drawable/weekday_background"
+      android:textOff="@string/weekday_saturday"
+      android:textOn="@string/weekday_saturday"
+      app:layout_constraintHorizontal_chainStyle="spread"
+      app:layout_constraintLeft_toRightOf="@+id/dayFr"
+      app:layout_constraintRight_toLeftOf="@+id/daySu"
+      />
+
+  <ToggleButton
+      android:id="@+id/daySu"
+      style="@style/toggleButton"
+      android:layout_width="@dimen/day_toggle_button_size"
+      android:layout_height="@dimen/day_toggle_button_size"
+      android:layout_marginStart="@dimen/day_toggle_button_margin"
+      android:layout_marginEnd="@dimen/day_toggle_button_margin"
+      android:background="@drawable/weekday_background"
+      android:textOff="@string/weekday_sunday"
+      android:textOn="@string/weekday_sunday"
+      app:layout_constraintHorizontal_chainStyle="spread"
+      app:layout_constraintLeft_toRightOf="@+id/daySa"
+      app:layout_constraintRight_toRightOf="parent"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

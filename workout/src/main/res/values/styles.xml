@@ -1,20 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <style name="workoutTitle">
-    <item name="android:textSize">22sp</item>
+
+  <style name="TextAppearance.BaseTextStyle">
+    <item name="android:fontFamily">@font/nunito_sans_light</item>
+  </style>
+
+  <style name="TextAppearance.TitleBig">
+    <item name="android:textSize">@dimen/text_title_big</item>
     <item name="android:textStyle">bold</item>
     <item name="android:textColor">@color/colorPrimary</item>
     <item name="android:fontFamily">@font/nunito_sans_bold</item>
   </style>
 
-  <style name="newWorkoutLabel">
-    <item name="android:textSize">16sp</item>
+  <style name="TextAppearance.Title" parent="TextAppearance.BaseTextStyle">
+    <item name="android:textSize">@dimen/text_title</item>
     <item name="android:textStyle">bold</item>
     <item name="android:textColor">@android:color/black</item>
-    <item name="android:fontFamily">@font/nunito_sans_light</item>
   </style>
 
-  <style name="newWorkoutLabel.newWorkout">
+  <style name="TextAppearance.ButtonBig" parent="TextAppearance.BaseTextStyle">
+    <item name="android:textSize">@dimen/text_title</item>
     <item name="android:textColor">@android:color/white</item>
+  </style>
+
+  <style name="TextAppearance.ButtonSmall" parent="TextAppearance.BaseTextStyle">
+    <item name="android:textSize">@dimen/text_small</item>
+    <item name="android:textColor">@android:color/white</item>
+  </style>
+
+  <style name="toggleButton" parent="TextAppearance.BaseTextStyle">
+    <item name="android:textColor">@drawable/weekday_text_toggle</item>
+  </style>
+
+  <style name="TextAppearance.MaterialCompat.Body1">
+    <item name="android:textSize">@dimen/text_title</item>
+    <item name="android:fontFamily">@font/nunito_sans_light</item>
+    <item name="android:textColor">@color/colorPrimary</item>
+  </style>
+
+  <style name="TextAppearance.MaterialCompat.Body2">
+    <item name="android:textSize">@dimen/text_title</item>
+    <item name="android:fontFamily">@font/nunito_sans_bold</item>
+    <item name="android:textColor">@color/colorPrimary</item>
   </style>
 </resources>

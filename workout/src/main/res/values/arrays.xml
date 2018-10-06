@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string-array name="workout_steps">
+    <item>@string/workout_step_1</item>
+    <item>@string/workout_step_2</item>
+  </string-array>
+</resources>
