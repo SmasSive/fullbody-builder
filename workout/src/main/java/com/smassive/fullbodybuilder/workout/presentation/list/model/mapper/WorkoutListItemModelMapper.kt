@@ -6,6 +6,6 @@ import com.smassive.fullbodybuilder.workout.presentation.list.model.WorkoutListI
 class WorkoutListItemModelMapper {
 
   fun map(workouts: List<Workout>): List<WorkoutListItemModel> {
-    return workouts.map { WorkoutListItemModel(it.name) }
+    return workouts.map { WorkoutListItemModel(it.id, it.name) }
   }
 }

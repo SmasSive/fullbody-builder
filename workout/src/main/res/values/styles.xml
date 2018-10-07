@@ -3,32 +3,56 @@
 
   <style name="TextAppearance.BaseTextStyle">
     <item name="android:fontFamily">@font/nunito_sans_light</item>
+    <item name="android:textColor">@android:color/black</item>
+    <item name="android:textSize">@dimen/text_normal</item>
   </style>
 
-  <style name="TextAppearance.TitleBig">
+  <style name="TextAppearance.Toolbar"
+         parent="TextAppearance.BaseTextStyle">
+    <item name="android:textColor">@android:color/white</item>
+    <item name="android:textSize">@dimen/text_title_big</item>
+  </style>
+
+  <style name="TextAppearance.TitleBig"
+         parent="TextAppearance.BaseTextStyle">
     <item name="android:textSize">@dimen/text_title_big</item>
     <item name="android:textStyle">bold</item>
     <item name="android:textColor">@color/colorPrimary</item>
     <item name="android:fontFamily">@font/nunito_sans_bold</item>
   </style>
 
-  <style name="TextAppearance.Title" parent="TextAppearance.BaseTextStyle">
+  <style name="TextAppearance.Title"
+         parent="TextAppearance.BaseTextStyle">
     <item name="android:textSize">@dimen/text_title</item>
     <item name="android:textStyle">bold</item>
-    <item name="android:textColor">@android:color/black</item>
   </style>
 
-  <style name="TextAppearance.ButtonBig" parent="TextAppearance.BaseTextStyle">
+  <style name="TextAppearance.Body"
+         parent="TextAppearance.BaseTextStyle">
+    <item name="android:textColor">@color/mediumGrey</item>
+  </style>
+
+  <style name="TextAppearance.Indicator"
+         parent="TextAppearance.BaseTextStyle">
+    <item name="android:textSize">@dimen/text_title</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:textColor">@color/colorPrimary</item>
+  </style>
+
+  <style name="TextAppearance.ButtonBig"
+         parent="TextAppearance.BaseTextStyle">
     <item name="android:textSize">@dimen/text_title</item>
     <item name="android:textColor">@android:color/white</item>
   </style>
 
-  <style name="TextAppearance.ButtonSmall" parent="TextAppearance.BaseTextStyle">
+  <style name="TextAppearance.ButtonSmall"
+         parent="TextAppearance.BaseTextStyle">
     <item name="android:textSize">@dimen/text_small</item>
     <item name="android:textColor">@android:color/white</item>
   </style>
 
-  <style name="toggleButton" parent="TextAppearance.BaseTextStyle">
+  <style name="toggleButton"
+         parent="TextAppearance.BaseTextStyle">
     <item name="android:textColor">@drawable/weekday_text_toggle</item>
   </style>
 

@@ -11,13 +11,17 @@
       android:label="WorkoutListFragment"
       >
     <action
-        android:id="@+id/action_workoutListFragment_to_newWorkoutFragment"
-        app:destination="@id/newWorkoutFragment"
+        android:id="@+id/action_workoutListFragment_to_workoutDetailFragment"
+        app:destination="@id/workoutDetailFragment"
+        app:enterAnim="@anim/nav_enter_from_right_anim"
+        app:exitAnim="@anim/nav_exit_to_left_anim"
+        app:popEnterAnim="@anim/nav_enter_from_left_anim"
+        app:popExitAnim="@anim/nav_exit_to_right_anim"
         />
   </fragment>
   <fragment
-      android:id="@+id/newWorkoutFragment"
-      android:name="com.smassive.fullbodybuilder.workout.presentation.add.view.NewWorkoutFragment"
-      android:label="NewWorkoutFragment"
+      android:id="@+id/workoutDetailFragment"
+      android:name="com.smassive.fullbodybuilder.workout.presentation.detail.view.WorkoutDetailFragment"
+      android:label="WorkoutDetailFragment"
       />
 </navigation>

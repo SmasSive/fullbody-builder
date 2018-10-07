@@ -5,20 +5,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.smassive.fullbodybuilder.workout.R
-import com.smassive.fullbodybuilder.workout.domain.model.Workout
 import com.smassive.fullbodybuilder.workout.presentation.list.model.WorkoutListItemModel
+import kotlinx.android.synthetic.main.item_workout.view.workoutDetailLayout
 import kotlinx.android.synthetic.main.item_workout.view.workoutName
-import kotlinx.android.synthetic.main.item_workout.view.workoutStepper
-import moe.feng.common.stepperview.IStepperAdapter
 
 class WorkoutAdapter(
     private val workouts: List<WorkoutListItemModel>,
-    private val onWorkoutSelected: (Workout) -> Unit
+    private val onWorkoutSelected: (WorkoutListItemModel) -> Unit
 ) : RecyclerView.Adapter<WorkoutAdapter.ViewHolder>() {
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
     val view = LayoutInflater.from(parent.context).inflate(R.layout.item_workout, parent, false)
-    return ViewHolder(view, WorkoutStepperAdapter(view.workoutStepper), onWorkoutSelected)
+    return ViewHolder(view, onWorkoutSelected)
   }
 
   override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -31,13 +29,12 @@ class WorkoutAdapter(
 
   class ViewHolder(
       private val view: View,
-      private val stepperAdapter: IStepperAdapter,
-      private val onClick: (Workout) -> Unit
+      private val onClick: (WorkoutListItemModel) -> Unit
   ) : RecyclerView.ViewHolder(view) {
 
     fun bind(workoutListItemModel: WorkoutListItemModel) {
       view.workoutName.text = workoutListItemModel.name
-      view.workoutStepper.stepperAdapter = stepperAdapter
+      view.workoutDetailLayout.setOnClickListener { onClick.invoke(workoutListItemModel) }
     }
   }
 }

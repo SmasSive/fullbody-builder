@@ -6,6 +6,8 @@ import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
 import com.smassive.fullbodybuilder.R
 import com.smassive.fullbodybuilder.core.util.onErrorStub
+import com.smassive.fullbodybuilder.workout.data.datasource.local.model.DayDataModel
+import com.smassive.fullbodybuilder.workout.data.datasource.local.model.DayEntity
 import com.smassive.fullbodybuilder.workout.data.datasource.local.model.WorkoutEntity
 import io.reactivex.Completable
 import io.reactivex.schedulers.Schedulers
@@ -73,11 +75,22 @@ class DbPrepopulator(
       WorkoutEntity(52, context.getString(R.string.workout_title_week_52))
   )
 
+  private val daysOfWeek = listOf(
+      DayEntity(DayDataModel.MondayDataModel.id, context.getString(R.string.monday)),
+      DayEntity(DayDataModel.TuesdayDataModel.id, context.getString(R.string.tuesday)),
+      DayEntity(DayDataModel.WednesdayDataModel.id, context.getString(R.string.wednesday)),
+      DayEntity(DayDataModel.ThursdayDataModel.id, context.getString(R.string.thursday)),
+      DayEntity(DayDataModel.FridayDataModel.id, context.getString(R.string.friday)),
+      DayEntity(DayDataModel.SaturdayDataModel.id, context.getString(R.string.saturday)),
+      DayEntity(DayDataModel.SundayDataModel.id, context.getString(R.string.sunday))
+  )
+
   @SuppressLint("CheckResult")
   override fun onCreate(db: SupportSQLiteDatabase) {
     super.onCreate(db)
     Completable.fromCallable {
       database.workoutDao().insertAll(weekWorkouts)
+      database.dayDao().insertAll(daysOfWeek)
     }.subscribeOn(Schedulers.io()).subscribe({}, onErrorStub)
   }
 }

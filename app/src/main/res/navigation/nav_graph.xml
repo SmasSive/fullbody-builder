@@ -5,8 +5,6 @@
             app:startDestination="@id/workoutListFragment"
     >
 
-  <include app:graph="@navigation/workout_nav_graph" />
-
   <fragment
       android:id="@+id/workoutListFragment"
       android:name="com.smassive.fullbodybuilder.workout.presentation.list.view.WorkoutListFragment"

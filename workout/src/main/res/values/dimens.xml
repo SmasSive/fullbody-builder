@@ -20,6 +20,7 @@
   <dimen name="text_title_big">22sp</dimen>
   <dimen name="text_title">16sp</dimen>
   <dimen name="text_small">12sp</dimen>
+  <dimen name="text_normal">14sp</dimen>
 
   <dimen name="button_height_small">32dp</dimen>
   <dimen name="button_height_normal">48dp</dimen>

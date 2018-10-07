@@ -6,6 +6,6 @@ import com.smassive.fullbodybuilder.workout.domain.model.Workout
 class WorkoutEntityMapper {
 
   fun map(workoutEntities: List<WorkoutEntity>): List<Workout> {
-    return workoutEntities.map { Workout.FullWorkout(it.name) }
+    return workoutEntities.map { Workout(it.id, it.name) }
   }
 }

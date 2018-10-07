@@ -8,9 +8,16 @@ import org.koin.dsl.module.module
 
 val dataModule = module {
 
-  single { Room.databaseBuilder(get(), FullbodyBuilderLocalSource::class.java, DB_NAME).addCallback(get<DbPrepopulator>()).build() }
+  single {
+    Room.databaseBuilder(get(), FullbodyBuilderLocalSource::class.java, DB_NAME).addCallback(get<DbPrepopulator>())
+        .build()
+  }
 
   single { DbPrepopulator(get(), lazy { get<FullbodyBuilderLocalSource>() }) }
 
   single { get<FullbodyBuilderLocalSource>().workoutDao() }
+
+  single { get<FullbodyBuilderLocalSource>().dayDao() }
+
+  single { get<FullbodyBuilderLocalSource>().workoutDayDao() }
 }

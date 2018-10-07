@@ -2,12 +2,15 @@
 <resources>
   <string name="new_workout_name_label">Workout name:</string>
   <string name="new_workout_name_hint">Workout name</string>
-  <string name="new_workout_button">Add Workout</string>
+  <string name="workout_detail_save_button">Save Workout</string>
   <string name="start_workout_button">Start Workout</string>
+
+  <string name="workout_detail">Workout detail</string>
 
   <string name="workout_step_1">Workout days</string>
   <string name="workout_step_2">Exercises</string>
 
+  <string name="no_recent_data">No recent data</string>
   <string name="next">Next</string>
 
   <string name="weekday_monday">M</string>

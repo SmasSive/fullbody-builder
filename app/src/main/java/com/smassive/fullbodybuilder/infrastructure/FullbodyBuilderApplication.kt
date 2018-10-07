@@ -5,7 +5,8 @@ import com.jakewharton.threetenabp.AndroidThreeTen
 import com.smassive.fullbodybuilder.core.infrastructure.di.coreModule
 import com.smassive.fullbodybuilder.infrastructure.di.appModule
 import com.smassive.fullbodybuilder.infrastructure.di.dataModule
-import com.smassive.fullbodybuilder.workout.infrastructure.di.workoutModule
+import com.smassive.fullbodybuilder.workout.infrastructure.di.workoutDataModule
+import com.smassive.fullbodybuilder.workout.infrastructure.di.workoutPresentationModule
 import org.koin.android.ext.android.startKoin
 
 class FullbodyBuilderApplication : Application() {
@@ -16,7 +17,8 @@ class FullbodyBuilderApplication : Application() {
         appModule,
         coreModule,
         dataModule,
-        workoutModule))
+        workoutDataModule,
+        workoutPresentationModule))
 
     AndroidThreeTen.init(this)
   }

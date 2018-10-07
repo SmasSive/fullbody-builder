@@ -11,10 +11,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.github.rubensousa.gravitysnaphelper.GravityPagerSnapHelper
 import com.smassive.fullbodybuilder.core.util.observeNonNull
 import com.smassive.fullbodybuilder.workout.R
+import com.smassive.fullbodybuilder.workout.presentation.detail.view.EXTRA_WORKOUT_ID
 import com.smassive.fullbodybuilder.workout.presentation.list.model.WorkoutListModel
 import com.smassive.fullbodybuilder.workout.presentation.list.view.adapter.WorkoutAdapter
 import com.smassive.fullbodybuilder.workout.presentation.list.viewmodel.WorkoutListViewModel
-import kotlinx.android.synthetic.main.main_fragment.workoutList
+import kotlinx.android.synthetic.main.workout_list_fragment.workoutList
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class WorkoutListFragment : Fragment() {
@@ -22,7 +23,7 @@ class WorkoutListFragment : Fragment() {
   private val workoutListViewModel: WorkoutListViewModel by viewModel()
 
   override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-    return inflater.inflate(R.layout.main_fragment, container, false)
+    return inflater.inflate(R.layout.workout_list_fragment, container, false)
   }
 
   override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -34,7 +35,8 @@ class WorkoutListFragment : Fragment() {
   private fun configRecyclerAdapter(workoutListModel: WorkoutListModel) {
     workoutList.layoutManager = LinearLayoutManager(this.context, LinearLayoutManager.HORIZONTAL, false)
     workoutList.adapter = WorkoutAdapter(workoutListModel.workouts) {
-      findNavController().navigate(R.id.action_workoutListFragment_to_newWorkoutFragment)
+      findNavController()
+          .navigate(R.id.action_workoutListFragment_to_workoutDetailFragment, Bundle().apply { putInt(EXTRA_WORKOUT_ID, it.id) })
     }
     GravityPagerSnapHelper(Gravity.START, true).attachToRecyclerView(workoutList)
     workoutList.scrollToPosition(workoutListModel.currentListPosition)
